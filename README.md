@@ -1,4 +1,22 @@
 # bloXroute-newTxs-test
+
+# Regression test plan
+Follow this [link](https://docs.google.com/spreadsheets/d/1Dp6ozwUPTDpdzOTgEEXUOepx6PqkMVJDXbLMR9XmsGk/edit?usp=sharing) to view the test cases.
+
+# Instructions
+1. Clone https://github.com/eduardblumental/bloXroute-newTxs-test.git and ```cd``` to the repository.
+2. (Optional) Create and enter a virtual evnironment.
+	* ```python3 -m venv venv```
+	* ```source venv/bin/activate```
+2. Run ```pip3 install -r requirements.txt```.
+	* In case you cannot install bloxroute-gateway package, clone the [bxcommon](https://github.com/bloXroute-Labs/bxcommon) repo and manually add its src contents to the bloXroute-newTxs-test repo.
+3. ```cd``` to the ```test``` directory and run ```python3 -m pytest [-vs] test_newTxs_*.py [--ws_uri] [--auth_header] [--conn_attempts] [--notification_count] [--channel]```
+	* Option ```--ws_uri``` allows to specify the websocket uri. Default: the test will attempt to get the value from BLOXROUTE_WS_URI environment variable.
+	* Option ```--auth_header``` allows to specify bloxroute authentication header. Default: the test will attempt to get the value from BLOXROUTE_AUTH_HEADER environment variable.
+	* Option ```--conn_attempts``` allows to specify the number of connection attempts before an error is raised. Default: 5 connection attempts. 
+	* Option ```--notification_count``` allows to specify notification count in the test sample. Default: 5 notifications. 
+    * Option ```--channel``` allows to specify the channel to be tested. For now, it does not make sense to change this option. Default: newTxs.
+	 
 # QA Home Assignment
 
 This home assignment consists ot two parts:
