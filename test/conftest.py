@@ -4,8 +4,8 @@ import os, pytest
 def pytest_addoption(parser):
     parser.addoption("--ws_uri", action="store", default=os.environ.get('BLOXROUTE_WS_URI'))
     parser.addoption("--auth_header", action="store", default=os.environ.get('BLOXROUTE_AUTH_HEADER'))
-    parser.addoption("--conn_attempts", action="store", default="10")
-    parser.addoption("--notification_count", action="store", default="1")
+    parser.addoption("--conn_attempts", action="store", default="5")
+    parser.addoption("--notification_count", action="store", default="5")
     parser.addoption("--channel", action="store", default="newTxs")
 
 
